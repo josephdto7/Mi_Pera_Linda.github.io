@@ -1,1 +1,296 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fdf7f8;
+    color: #30282a;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(circle at top, #fff5f7 0%, #fdf7f8 45%, #f8e9ed 100%);
+    
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contenido-portada {
+    max-width: 600px;
+    animation: aparecer 1.2s ease;
+}
+
+.pequeno {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #b97886;
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(48px, 12vw, 80px);
+    font-weight: normal;
+    line-height: 1.1;
+
+    color: #30282a;
+
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #66585b;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+button {
+    border: none;
+
+    background: #b97886;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(185, 120, 134, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(185, 120, 134, 0.35);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   ANIMACIÓN PORTADA
+========================= */
+
+.portada.oculta {
+    opacity: 0;
+    transform: scale(1.05);
+    pointer-events: none;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: opacity 1s ease, transform 1s ease;
+
+    background: #fdf7f8;
+}
+
+.carta.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   HOJA DE LA CARTA
+========================= */
+
+.hoja {
+    width: 100%;
+    max-width: 700px;
+
+    background: #fffdfd;
+
+    padding: 55px 50px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 10px 40px rgba(48, 40, 42, 0.08);
+
+    border: 1px solid #f1dfe3;
+}
+
+.saludo {
+    font-size: 22px;
+
+    color: #b97886;
+
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: normal;
+
+    margin-bottom: 35px;
+
+    color: #30282a;
+}
+
+.hoja p:not(.saludo):not(.firma):not(.final) {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #51474a;
+
+    margin-bottom: 22px;
+}
+
+.final {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #30282a;
+
+    margin-top: 35px;
+}
+
+.firma {
+    margin-top: 45px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #b97886;
+
+    font-style: italic;
+
+    text-align: right;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .portada {
+        padding: 25px;
+    }
+
+    .pequeno {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+
+    .carta {
+        padding: 30px 15px;
+        align-items: flex-start;
+    }
+
+    .hoja {
+        padding: 40px 25px;
+    }
+
+    h2 {
+        font-size: 31px;
+    }
+
+    .hoja p:not(.saludo):not(.firma):not(.final) {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .final {
+        font-size: 17px;
+    }
+
+    .firma {
+        font-size: 18px;
+    }
+
+}
+```
