@@ -1,16 +1,116 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba ❤️</title>
+    <title>Para Daniela ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Feliz cumpleaños, Daniela ❤️</h1>
+    <!-- PORTADA -->
+    <section class="portada" id="portada">
 
-    <p>Esta es nuestra página de prueba.</p>
+        <div class="contenido-portada">
+
+            <p class="pequeno">Tengo algo para ti...</p>
+
+            <h1>Para Daniela ❤️</h1>
+
+            <p class="subtitulo">
+                Porque hoy no quería simplemente decirte<br>
+                "feliz cumpleaños".
+            </p>
+
+            <button onclick="abrirCarta()">
+                Abrir mi carta 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARTA -->
+    <section class="carta" id="carta">
+
+        <div class="hoja">
+
+            <p class="saludo">Mi niña,</p>
+
+            <h2>Feliz cumpleaños ❤️</h2>
+
+            <p>
+                Hoy quiero aprovechar este día para hablarte de ti,
+                porque aunque podría escribirte miles de cosas sobre
+                nosotros, hoy quiero que recuerdes lo especial que eres.
+            </p>
+
+            <p>
+                Eres una persona increíble, de esas que tienen una forma
+                muy especial de llenar los lugares a los que llegan.
+                Tu forma de ser, tu alegría, tu manera de hablar, de reír
+                y de disfrutar cada momento hacen que sea imposible no
+                querer tenerte cerca.
+            </p>
+
+            <p>
+                Me encanta esa personalidad tan tuya, esa forma de ser
+                tan extrovertida y auténtica. Me encanta que seas tú sin
+                miedo a demostrarlo, porque precisamente eso es una de
+                las tantas cosas que te hacen única.
+            </p>
+
+            <p>
+                Quiero que nunca olvides todo lo que vales. Que sigas
+                persiguiendo tus sueños, que sigas creciendo, aprendiendo,
+                riendo y disfrutando de cada etapa de tu vida.
+            </p>
+
+            <p>
+                Y espero poder seguir estando a tu lado para celebrar
+                muchos cumpleaños más, acompañarte en tus sueños,
+                apoyarte en los días difíciles y disfrutar contigo todos
+                esos pequeños momentos que terminan convirtiéndose en
+                grandes recuerdos.
+            </p>
+
+            <p>
+                Gracias por ser tú, por existir y por permitirme compartir
+                una parte de mi vida contigo.
+            </p>
+
+            <p class="final">
+                Espero que este nuevo año de tu vida esté lleno de
+                momentos tan bonitos como tú. ✨
+            </p>
+
+            <p class="firma">
+                Con todo mi amor,<br>
+                Joseph ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function abrirCarta() {
+
+            document.getElementById("portada").classList.add("oculta");
+
+            setTimeout(function() {
+                document.getElementById("carta").classList.add("visible");
+            }, 500);
+
+        }
+    </script>
 
 </body>
 </html>
+```
